@@ -39,6 +39,6 @@ for(var read=toRead;read>0;read-=10){
             $(".top-articles").append(byline);
             console.log(byline.text());
         }
-    })
+    });
     page++;
 }
