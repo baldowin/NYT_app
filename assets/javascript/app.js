@@ -5,7 +5,7 @@ var endDate=0;
 var toRead=10;
 var page=0;
 
-for(var read=toRead;read>0;read-=10){
+for(var read=toRead;read>0;read=read-10){
     var querryURL="https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+querry+"&fq="+filter+"&api-key=CW6DbOugxP6huQyzrGYWFPc4pna9sAT2&page="+page;
     if (startDate!=0){
         querryURL=querryURL+"&begin_date="+startDate;
@@ -19,8 +19,8 @@ for(var read=toRead;read>0;read-=10){
     }).then(function(response){
         var articles=response.response.docs;
         var max=10;
-        if(read>10){
-            max=read;
+        if(read+10<10){
+            max=read+10;
         }
         for(var i=0;i<max;i++){
 
