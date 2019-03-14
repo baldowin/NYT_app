@@ -1,57 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>NYT</title>
-    <link rel="stylesheet" type="text/css" href="assets\css\style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!--jQuery CDN Link-->
-<!--Bootstrap CSS-->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-<!--Bootstrap main-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</head>
-<body>
+    <!--jQuery CDN Link-->
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="assets\css\style.css" />
+    <!--Bootstrap main-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col">
-
-                    <nav class="navbar navbar-default">
-                            <div class="container-fluid">
-                              <div class="navbar-header">
-                                <a class="navbar-brand" href="#">
-                                  <img alt="Brand" id="paper" src="assets\images\paper.png">
-                                  <p id="Title">New York Times Search</p>
-                                </a>
-                              </div>
-                            </div>
-                          </nav>
-                          
-             
+      <div class="row">
+        <div class="col">
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                  <img alt="Brand" id="paper" src="assets\images\paper.png" />
+                  <p id="Title">New York Times Search</p>
+                </a>
+              </div>
             </div>
+          </nav>
         </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card mb-3">
+            <div class="card-header">Search Parameters</div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="">Search Term:</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="search"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="number-records"
+                  >Number of Records to Retrieve:</label
+                >
+                <select class="form-control" id="number-records">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="start-year">Start Year (Optional):</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="start-year"
+                  placeholder=""
+                />
+              </div>
+              <div class="form-group">
+                <label for="end-year">End Year (Optional):</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="end-year"
+                  placeholder=""
+                />
+              </div>
 
-        <div class="row">
-            <div class="col">
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus a voluptates eius harum consectetur delectus nesciunt omnis. At molestias corporis asperiores consequuntur libero, reiciendis, vel perspiciatis cum unde in tenetur.
-                Voluptate eum itaque quos minima possimus iste suscipit obcaecati quae impedit pariatur et, amet error perspiciatis! Quibusdam totam debitis dolore ut alias voluptates similique officia distinctio accusamus et. Consequuntur, deserunt.
-                Cum impedit totam fugiat rerum officiis sequi labore in dignissimos quisquam, dolorem, et sit recusandae similique id atque expedita voluptas magnam nobis odio, inventore iste qui fugit corrupti? Aperiam, voluptas.
-                Velit, consequuntur eaque laborum id doloribus quia? Consectetur eius temporibus pariatur ipsa hic natus, vel doloremque accusamus cumque eligendi aliquam repellendus blanditiis laborum dolorem sed quasi eveniet repellat deserunt laudantium?
-                Consequuntur ex quos sed blanditiis temporibus incidunt debitis quisquam ipsam eaque, nam consequatur similique maxime laudantium aliquam soluta illum, nostrum mollitia molestias ipsum officia qui cum. Doloribus consequatur vitae odit.</p>
+              <a href="#" class="card-link">Search</a>
+              <a href="#" class="card-link">Clear Results</a>
             </div>
+          </div>
         </div>
-
-        <div class="row">
-                <div class="col">
-                    
-                </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">Top Articles</div>
+            <div class="card-body">
+              <div id="top-articles"></div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <footer></footer>
+        </div>
+      </div>
     </div>
-
-    
-</body>
+  </body>
 </html>
